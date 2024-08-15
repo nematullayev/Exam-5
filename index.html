@@ -3,15 +3,781 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>5-chi Oyning Imtihoni</title>
     <link
       rel="shortcut icon"
-      href="data:image/png;base64,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"
+      href="./images/header-logo.svg"
       type="image/x-icon"
     />
   </head>
   <body>
+    <div class="header-top-wrapper">
+      <div class="header-top container">
+        <p class="header-top-text1">
+          Скидка 10% по промокоду “ZAMOK” на все заказы до 10.09
+        </p>
+        <p class="header-top-text2">Обратный звонок</p>
+      </div>
+    </div>
+    <header class="header container">
+      <div class="header-left">
+        <div class="header-left-left">
+          <img
+            class="header-left-left-img"
+            src="./images/header-logo.svg"
+            alt="Logo"
+          />
+        </div>
+        <ul class="header-left-right">
+          <li class="header-left-right-item">Главная</li>
+          <li class="header-left-right-item">
+            Каталог <img src="./images/arrow-botom.svg" alt="Arrow botom" />
+          </li>
+          <li class="header-left-right-item">Оптовая продажа</li>
+          <li class="header-left-right-item">О нас</li>
+        </ul>
+      </div>
+      <div class="header-right">
+        <div class="header-right-left">
+          <img src="./images/phone.svg" alt="Phone" />
+          <p class="header-right-left-tel">+7 (966) 55 88 499</p>
+        </div>
+        <div class="header-right-right">
+          <img
+            class="header-right-right-img1"
+            src="./images/heart.svg"
+            alt="heart"
+          />
+          <a href="./card.html">
+            <img
+              class="header-right-right-img1"
+              src="./images/card.svg"
+              alt="card"
+            />
+          </a>
+        </div>
+      </div>
+    </header>
+    <hr class="hr" />
+    <section class="reminder container">
+      <div class="reminder-left">
+        <div class="reminder-left-top">
+          <strong class="reminder-left-top-text"
+            >Главная /
+            <span class="reminder-left-top-text2">Каталог</span></strong
+          >
+        </div>
+        <div class="reminder-left-senter">
+          <h2 class="reminder-left-senter-title">
+            Накладные электронные замки
+          </h2>
+          <p class="reminder-left-senter-rem">(12)</p>
+        </div>
+        <div class="reminder-left-end">
+          <button class="reminder-left-end-buton">Сбросить фильтры</button>
+          <div class="reminder-left-end-div">
+            <p class="reminder-left-end-text">Электронные кодовые замки</p>
+            <img src="./images/x.svg" alt="x" />
+          </div>
+        </div>
+      </div>
+      <div class="reminder-right">
+        <select class="reminder-right-select">
+          <option value="">Популярности</option>
+        </select>
+      </div>
+    </section>
+    <section class="hero container">
+      <div class="hero-left">
+        <strong class="hero-left-title">Фильтр</strong>
+        <div class="hero-left-title-value">
+          <p class="hero-left-title-value-text">Цена</p>
+          <img
+            class="hero-left-title-value-img"
+            src="./images/arrow-top.svg"
+            alt="arrow-botom"
+          />
+        </div>
+        <div class="hero-left-inps">
+          <input class="inp1" type="text" placeholder="Ent start price " />
+          <input class="inp2" type="text" placeholder="Ent last price" />
+        </div>
+        <div class="hero-left-title-value2">
+          <p class="hero-left-title-value-text">Особенности</p>
+          <img
+            class="hero-left-title-value-img"
+            src="./images/arrow-botom.svg   "
+            alt="arrow-botom"
+          />
+        </div>
+        <div class="hero-left-title-value2">
+          <p class="hero-left-title-value-text">Цвет</p>
+          <img
+            class="hero-left-title-value-img"
+            src="./images/arrow-botom.svg   "
+            alt="arrow-botom"
+          />
+        </div>
+        <div class="hero-left-title-value2">
+          <p class="hero-left-title-value-text">Материал</p>
+          <img
+            class="hero-left-title-value-img"
+            src="./images/arrow-botom.svg   "
+            alt="arrow-botom"
+          />
+        </div>
+        <div class="hero-left-title-value2">
+          <p class="hero-left-title-value-text">Размеры</p>
+          <img
+            class="hero-left-title-value-img"
+            src="./images/arrow-botom.svg   "
+            alt="arrow-botom"
+          />
+        </div>
+      </div>
+      <div class="hero-right">
+        <template id="template">
+          <div class="hero-right-one">
+            <div class="hero-right-one-center">
+              <a href="./single.html">
+                <img class="hero-right-one-center-img" src="" alt="office" />
+              </a>
+            </div>
+            <div class="hero-right-one-top">
+              <div class="hero-right-one-top-left">
+                <div class="hero-right-one-top-left-first">
+                  <img
+                    class="hero-right-one-top-left-img"
+                    src="./images/x.svg"
+                    alt="x"
+                  />
+                  <p class="hero-right-one-top-left-text">Нет в наличии</p>
+                </div>
+                <div class="hero-right-one-top-left-second">
+                  <button class="hero-right-one-top-left-second-btn">
+                    <img src="./images/gift.svg" alt="gidt" />
+                    Подарок
+                  </button>
+                </div>
+              </div>
+              <div class="hero-right-one-top-right">
+                <button class="hero-right-one-top-right-btn">SALE</button>
+              </div>
+            </div>
+            <div class="hero-right-one-bootom">
+              <div class="hero-right-one-raiting">
+                <div class="hero-right-one-raiting-stars">
+                  <img src="./images/star-full.svg" alt="star-full" />
+                  <img src="./images/star-full.svg" alt="star-full" />
+                  <img src="./images/star-full.svg" alt="star-full" />
+                  <img src="./images/star-half.svg" alt="star-half" />
+                  <img src="./images/star-half.svg" alt="star-half" />
+                </div>
+                <div class="hero-right-one-raiting-text">
+                  <p class="hero-right-one-raiting-text-text">(12) отзывов</p>
+                </div>
+              </div>
+              <div class="hero-right-one-title">
+                <h3 class="hero-right-one-title-tit"></h3>
+              </div>
+              <div class="hero-right-one-prices">
+                <h2 class="hero-right-one-prices-discount-value">7 000₽</h2>
+                <h3 class="hero-right-one-prices-real-value">8 000₽</h3>
+                <img class="card" src="./images/Button.svg" alt="button" />
+              </div>
+            </div>
+          </div>
+        </template>
+      </div>
+    </section>
+    <div class="hero-pageination container">
+      <img class="arrow-left" src="./images/arrow-left.png" alt="arrow-left" />
+      <button class="one">1</button>
+      <button class="two">2</button>
+      <button class="two">3</button>
+      <button class="two">4</button>
+      <button class="two">5</button>
+      <button class="two">6</button>
+      <button class="two">7</button>
+      <p>...</p>
+      <button class="two">15</button>
+      <img src="./images/arrow-right.png" alt="" />
+    </div>
+    <section class="past container">
+      <div class="past-top">
+        <h2 class="past-top-title">Вы недавно просмотрели</h2>
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="hero-right-one">
+                <div class="hero-right-one-center">
+                  <a href="./single.html">
+                    <img
+                      class="hero-right-one-center-img"
+                      src="./images/office.png"
+                      alt="office"
+                    />
+                  </a>
+                </div>
+                <div class="hero-right-one-top">
+                  <div class="hero-right-one-top-left">
+                    <div class="hero-right-one-top-left-first">
+                      <img
+                        class="hero-right-one-top-left-img"
+                        src="./images/x.svg"
+                        alt="x"
+                      />
+                      <p class="hero-right-one-top-left-text">Нет в наличии</p>
+                    </div>
+                    <div class="hero-right-one-top-left-second">
+                      <button class="hero-right-one-top-left-second-btn">
+                        <img src="./images/gift.svg" alt="gidt" />
+                        Подарок
+                      </button>
+                    </div>
+                  </div>
+                  <div class="hero-right-one-top-right">
+                    <button class="hero-right-one-top-right-btn">SALE</button>
+                  </div>
+                </div>
+                <div class="hero-right-one-bootom">
+                  <div class="hero-right-one-raiting">
+                    <div class="hero-right-one-raiting-stars">
+                      <img src="./images/star-full.svg" alt="star-full" />
+                      <img src="./images/star-full.svg" alt="star-full" />
+                      <img src="./images/star-full.svg" alt="star-full" />
+                      <img src="./images/star-half.svg" alt="star-half" />
+                      <img src="./images/star-half.svg" alt="star-half" />
+                    </div>
+                    <div class="hero-right-one-raiting-text">
+                      <p class="hero-right-one-raiting-text-text">
+                        (12) отзывов
+                      </p>
+                    </div>
+                  </div>
+                  <div class="hero-right-one-title">
+                    <h3 class="hero-right-one-title-tit">
+                      Вариативный замок Golden Soft для отеля
+                    </h3>
+                  </div>
+                  <div class="hero-right-one-prices">
+                    <h2 class="hero-right-one-prices-discount-value">7 000₽</h2>
+                    <h3 class="hero-right-one-prices-real-value">8 000₽</h3>
+                    <img class="card" src="./images/Button.svg" alt="button" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="hero-right-one">
+                <div class="hero-right-one-center">
+                  <a href="./single.html">
+                    <img
+                      class="hero-right-one-center-img"
+                      src="./images/office.png"
+                      alt="office"
+                    />
+                  </a>
+                </div>
+                <div class="hero-right-one-top">
+                  <div class="hero-right-one-top-left">
+                    <div class="hero-right-one-top-left-first">
+                      <img
+                        class="hero-right-one-top-left-img"
+                        src="./images/x.svg"
+                        alt="x"
+                      />
+                      <p class="hero-right-one-top-left-text">Нет в наличии</p>
+                    </div>
+                    <div class="hero-right-one-top-left-second">
+                      <button class="hero-right-one-top-left-second-btn">
+                        <img src="./images/gift.svg" alt="gidt" />
+                        Подарок
+                      </button>
+                    </div>
+                  </div>
+                  <div class="hero-right-one-top-right">
+                    <button class="hero-right-one-top-right-btn">SALE</button>
+                  </div>
+                </div>
+                <div class="hero-right-one-bootom">
+                  <div class="hero-right-one-raiting">
+                    <div class="hero-right-one-raiting-stars">
+                      <img src="./images/star-full.svg" alt="star-full" />
+                      <img src="./images/star-full.svg" alt="star-full" />
+                      <img src="./images/star-full.svg" alt="star-full" />
+                      <img src="./images/star-half.svg" alt="star-half" />
+                      <img src="./images/star-half.svg" alt="star-half" />
+                    </div>
+                    <div class="hero-right-one-raiting-text">
+                      <p class="hero-right-one-raiting-text-text">
+                        (12) отзывов
+                      </p>
+                    </div>
+                  </div>
+                  <div class="hero-right-one-title">
+                    <h3 class="hero-right-one-title-tit">
+                      Вариативный замок Golden Soft для отеля
+                    </h3>
+                  </div>
+                  <div class="hero-right-one-prices">
+                    <h2 class="hero-right-one-prices-discount-value">7 000₽</h2>
+                    <h3 class="hero-right-one-prices-real-value">8 000₽</h3>
+                    <img class="card" src="./images/Button.svg" alt="button" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="hero-right-one">
+                <div class="hero-right-one-center">
+                  <a href="./single.html">
+                    <img
+                      class="hero-right-one-center-img"
+                      src="./images/office.png"
+                      alt="office"
+                    />
+                  </a>
+                </div>
+                <div class="hero-right-one-top">
+                  <div class="hero-right-one-top-left">
+                    <div class="hero-right-one-top-left-first">
+                      <img
+                        class="hero-right-one-top-left-img"
+                        src="./images/x.svg"
+                        alt="x"
+                      />
+                      <p class="hero-right-one-top-left-text">Нет в наличии</p>
+                    </div>
+                    <div class="hero-right-one-top-left-second">
+                      <button class="hero-right-one-top-left-second-btn">
+                        <img src="./images/gift.svg" alt="gidt" />
+                        Подарок
+                      </button>
+                    </div>
+                  </div>
+                  <div class="hero-right-one-top-right">
+                    <button class="hero-right-one-top-right-btn">SALE</button>
+                  </div>
+                </div>
+                <div class="hero-right-one-bootom">
+                  <div class="hero-right-one-raiting">
+                    <div class="hero-right-one-raiting-stars">
+                      <img src="./images/star-full.svg" alt="star-full" />
+                      <img src="./images/star-full.svg" alt="star-full" />
+                      <img src="./images/star-full.svg" alt="star-full" />
+                      <img src="./images/star-half.svg" alt="star-half" />
+                      <img src="./images/star-half.svg" alt="star-half" />
+                    </div>
+                    <div class="hero-right-one-raiting-text">
+                      <p class="hero-right-one-raiting-text-text">
+                        (12) отзывов
+                      </p>
+                    </div>
+                  </div>
+                  <div class="hero-right-one-title">
+                    <h3 class="hero-right-one-title-tit">
+                      Вариативный замок Golden Soft для отеля
+                    </h3>
+                  </div>
+                  <div class="hero-right-one-prices">
+                    <h2 class="hero-right-one-prices-discount-value">7 000₽</h2>
+                    <h3 class="hero-right-one-prices-real-value">8 000₽</h3>
+                    <img class="card" src="./images/Button.svg" alt="button" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="hero-right-one">
+                <div class="hero-right-one-center">
+                  <a href="./single.html">
+                    <img
+                      class="hero-right-one-center-img"
+                      src="./images/office.png"
+                      alt="office"
+                    />
+                  </a>
+                </div>
+                <div class="hero-right-one-top">
+                  <div class="hero-right-one-top-left">
+                    <div class="hero-right-one-top-left-first">
+                      <img
+                        class="hero-right-one-top-left-img"
+                        src="./images/x.svg"
+                        alt="x"
+                      />
+                      <p class="hero-right-one-top-left-text">Нет в наличии</p>
+                    </div>
+                    <div class="hero-right-one-top-left-second">
+                      <button class="hero-right-one-top-left-second-btn">
+                        <img src="./images/gift.svg" alt="gidt" />
+                        Подарок
+                      </button>
+                    </div>
+                  </div>
+                  <div class="hero-right-one-top-right">
+                    <button class="hero-right-one-top-right-btn">SALE</button>
+                  </div>
+                </div>
+                <div class="hero-right-one-bootom">
+                  <div class="hero-right-one-raiting">
+                    <div class="hero-right-one-raiting-stars">
+                      <img src="./images/star-full.svg" alt="star-full" />
+                      <img src="./images/star-full.svg" alt="star-full" />
+                      <img src="./images/star-full.svg" alt="star-full" />
+                      <img src="./images/star-half.svg" alt="star-half" />
+                      <img src="./images/star-half.svg" alt="star-half" />
+                    </div>
+                    <div class="hero-right-one-raiting-text">
+                      <p class="hero-right-one-raiting-text-text">
+                        (12) отзывов
+                      </p>
+                    </div>
+                  </div>
+                  <div class="hero-right-one-title">
+                    <h3 class="hero-right-one-title-tit">
+                      Вариативный замок Golden Soft для отеля
+                    </h3>
+                  </div>
+                  <div class="hero-right-one-prices">
+                    <h2 class="hero-right-one-prices-discount-value">7 000₽</h2>
+                    <h3 class="hero-right-one-prices-real-value">8 000₽</h3>
+                    <img class="card" src="./images/Button.svg" alt="button" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="hero-right-one">
+                <div class="hero-right-one-center">
+                  <a href="./single.html">
+                    <img
+                      class="hero-right-one-center-img"
+                      src="./images/office.png"
+                      alt="office"
+                    />
+                  </a>
+                </div>
+                <div class="hero-right-one-top">
+                  <div class="hero-right-one-top-left">
+                    <div class="hero-right-one-top-left-first">
+                      <img
+                        class="hero-right-one-top-left-img"
+                        src="./images/x.svg"
+                        alt="x"
+                      />
+                      <p class="hero-right-one-top-left-text">Нет в наличии</p>
+                    </div>
+                    <div class="hero-right-one-top-left-second">
+                      <button class="hero-right-one-top-left-second-btn">
+                        <img src="./images/gift.svg" alt="gidt" />
+                        Подарок
+                      </button>
+                    </div>
+                  </div>
+                  <div class="hero-right-one-top-right">
+                    <button class="hero-right-one-top-right-btn">SALE</button>
+                  </div>
+                </div>
+                <div class="hero-right-one-bootom">
+                  <div class="hero-right-one-raiting">
+                    <div class="hero-right-one-raiting-stars">
+                      <img src="./images/star-full.svg" alt="star-full" />
+                      <img src="./images/star-full.svg" alt="star-full" />
+                      <img src="./images/star-full.svg" alt="star-full" />
+                      <img src="./images/star-half.svg" alt="star-half" />
+                      <img src="./images/star-half.svg" alt="star-half" />
+                    </div>
+                    <div class="hero-right-one-raiting-text">
+                      <p class="hero-right-one-raiting-text-text">
+                        (12) отзывов
+                      </p>
+                    </div>
+                  </div>
+                  <div class="hero-right-one-title">
+                    <h3 class="hero-right-one-title-tit">
+                      Вариативный замок Golden Soft для отеля
+                    </h3>
+                  </div>
+                  <div class="hero-right-one-prices">
+                    <h2 class="hero-right-one-prices-discount-value">7 000₽</h2>
+                    <h3 class="hero-right-one-prices-real-value">8 000₽</h3>
+                    <img class="card" src="./images/Button.svg" alt="button" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="hero-right-one">
+                <div class="hero-right-one-center">
+                  <a href="./single.html">
+                    <img
+                      class="hero-right-one-center-img"
+                      src="./images/office.png"
+                      alt="office"
+                    />
+                  </a>
+                </div>
+                <div class="hero-right-one-top">
+                  <div class="hero-right-one-top-left">
+                    <div class="hero-right-one-top-left-first">
+                      <img
+                        class="hero-right-one-top-left-img"
+                        src="./images/x.svg"
+                        alt="x"
+                      />
+                      <p class="hero-right-one-top-left-text">Нет в наличии</p>
+                    </div>
+                    <div class="hero-right-one-top-left-second">
+                      <button class="hero-right-one-top-left-second-btn">
+                        <img src="./images/gift.svg" alt="gidt" />
+                        Подарок
+                      </button>
+                    </div>
+                  </div>
+                  <div class="hero-right-one-top-right">
+                    <button class="hero-right-one-top-right-btn">SALE</button>
+                  </div>
+                </div>
+                <div class="hero-right-one-bootom">
+                  <div class="hero-right-one-raiting">
+                    <div class="hero-right-one-raiting-stars">
+                      <img src="./images/star-full.svg" alt="star-full" />
+                      <img src="./images/star-full.svg" alt="star-full" />
+                      <img src="./images/star-full.svg" alt="star-full" />
+                      <img src="./images/star-half.svg" alt="star-half" />
+                      <img src="./images/star-half.svg" alt="star-half" />
+                    </div>
+                    <div class="hero-right-one-raiting-text">
+                      <p class="hero-right-one-raiting-text-text">
+                        (12) отзывов
+                      </p>
+                    </div>
+                  </div>
+                  <div class="hero-right-one-title">
+                    <h3 class="hero-right-one-title-tit">
+                      Вариативный замок Golden Soft для отеля
+                    </h3>
+                  </div>
+                  <div class="hero-right-one-prices">
+                    <h2 class="hero-right-one-prices-discount-value">7 000₽</h2>
+                    <h3 class="hero-right-one-prices-real-value">8 000₽</h3>
+                    <img class="card" src="./images/Button.svg" alt="button" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="hero-right-one">
+                <div class="hero-right-one-center">
+                  <a href="./single.html">
+                    <img
+                      class="hero-right-one-center-img"
+                      src="./images/office.png"
+                      alt="office"
+                    />
+                  </a>
+                </div>
+                <div class="hero-right-one-top">
+                  <div class="hero-right-one-top-left">
+                    <div class="hero-right-one-top-left-first">
+                      <img
+                        class="hero-right-one-top-left-img"
+                        src="./images/x.svg"
+                        alt="x"
+                      />
+                      <p class="hero-right-one-top-left-text">Нет в наличии</p>
+                    </div>
+                    <div class="hero-right-one-top-left-second">
+                      <button class="hero-right-one-top-left-second-btn">
+                        <img src="./images/gift.svg" alt="gidt" />
+                        Подарок
+                      </button>
+                    </div>
+                  </div>
+                  <div class="hero-right-one-top-right">
+                    <button class="hero-right-one-top-right-btn">SALE</button>
+                  </div>
+                </div>
+                <div class="hero-right-one-bootom">
+                  <div class="hero-right-one-raiting">
+                    <div class="hero-right-one-raiting-stars">
+                      <img src="./images/star-full.svg" alt="star-full" />
+                      <img src="./images/star-full.svg" alt="star-full" />
+                      <img src="./images/star-full.svg" alt="star-full" />
+                      <img src="./images/star-half.svg" alt="star-half" />
+                      <img src="./images/star-half.svg" alt="star-half" />
+                    </div>
+                    <div class="hero-right-one-raiting-text">
+                      <p class="hero-right-one-raiting-text-text">
+                        (12) отзывов
+                      </p>
+                    </div>
+                  </div>
+                  <div class="hero-right-one-title">
+                    <h3 class="hero-right-one-title-tit">
+                      Вариативный замок Golden Soft для отеля
+                    </h3>
+                  </div>
+                  <div class="hero-right-one-prices">
+                    <h2 class="hero-right-one-prices-discount-value">7 000₽</h2>
+                    <h3 class="hero-right-one-prices-real-value">8 000₽</h3>
+                    <img class="card" src="./images/Button.svg" alt="button" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+
+          <!-- If we need navigation buttons -->
+
+          <!-- If we need scrollbar -->
+        </div>
+      </div>
+    </section>
+    <section class="eget container">
+      <div class="eget-left">
+        <h2 class="eget-left-title">Eget quis quam metus, scelerisque.</h2>
+        <p class="eget-left-text">
+          Odio felis sit leo, massa, mauris, at pulvinar ultrices. Eu porttitor
+          molestie massa porttitor. Quisque at turpis ut proin eu et magna etiam
+          rhoncus.
+        </p>
+        <div class="eget-left-center">
+          <div class="eget-left-center-left">
+            <p class="eget-left-center-left-one">
+              <img class="tick" src="./images/tick.svg" alt="" />Межкомнатую
+              дверь
+            </p>
+            <p class="eget-left-center-left-second">
+              <img class="tick" src="./images/tick.svg" alt="" />Деревянную
+              дверь
+            </p>
+          </div>
+          <div class="eget-left-center-left">
+            <p class="eget-left-center-left-one">
+              <img class="tick" src="./images/tick.svg" alt="" />Межкомнатую
+              дверь
+            </p>
+            <p class="eget-left-center-left-second">
+              <img class="tick" src="./images/tick.svg" alt="" />Деревянную
+              дверь
+            </p>
+          </div>
+        </div>
+        <div class="eget-left-end">
+          <p class="eget-left-end-text">
+            Ac risus neque pulvinar tincidunt est. Tristique imperdiet viverra
+            interdum in leo. Nullam ullamcorper id enim fermentum integer
+            praesent bibendum. In ullamcorper purus scelerisque malesuada et
+            egestas. Ac dictumst mauris sed facilisis.
+          </p>
+        </div>
+      </div>
+      <div class="eget-right">
+        <img class="eget-rightimg" src="./images/tel.png" alt="tel" />
+      </div>
+    </section>
+    <section class="quis container">
+      <div class="quis-left">
+        <img
+          class="quis-left-img"
+          src="./images/logo32.png"
+          alt="quis-left-img"
+        />
+      </div>
+      <div class="quis-right">
+        <h2 class="quis-right-title">Eget quis quam metus, scelerisque.</h2>
+        <p class="quis-right-text">
+          Odio felis sit leo, massa, mauris, at pulvinar ultrices. Eu porttitor
+          molestie massa porttitor. Quisque at turpis ut proin eu et magna etiam
+          rhoncus.
+        </p>
+        <p class="quis-right-text2">
+          Ac risus neque pulvinar tincidunt est. Tristique imperdiet viverra
+          interdum in leo. Nullam ullamcorper id enim fermentum integer praesent
+          bibendum. In ullamcorper purus scelerisque malesuada et egestas. Ac
+          dictumst mauris sed facilisis.
+        </p>
+      </div>
+    </section>
+    <div class="call-wrapper">
+      <section class="call container">
+        <h2 class="call-title">Мы Вам перезвоним</h2>
+        <p class="call-text">
+          Если у вас возникли какие-то вопросы или проблемы, заполните форму и
+          мы Вам перезвоним.
+        </p>
+        <form class="form" action="">
+          <input class="enter1" type="text" placeholder="Ваше имя" />
+          <input class="enter2" type="email" placeholder="Ваш Email" />
+          <button class="send">Отправить</button>
+        </form>
+      </section>
+    </div>
+    <div class="footer-wrapper">
+      <footer class="footer container">
+        <div class="footer-one">
+          <div class="footer-one-top">
+            <img class="footer-one-top-img" src="./images/logo2.png" alt="" />
+          </div>
+          <div class="footer-one-botom">
+            <img class="footer-one-botom-img" src="./images/w.png" alt="" />
+            <img
+              class="footer-one-botom-img"
+              src="./images/twiter.png"
+              alt=""
+            />
+            <img
+              class="footer-one-botom-img"
+              src="./images/facebook.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="footer-two">
+          <strong class="footer-two-title">Навигация</strong>
+          <p class="footer-two-text">Главная</p>
+          <p class="footer-two-text">Каталог</p>
+          <p class="footer-two-text">Оптовая продажа</p>
+          <p class="footer-two-text">О нас</p>
+        </div>
+        <div class="footer-two">
+          <strong class="footer-two-title">Наши контакты</strong>
+          <p class="footer-two-text">Телефоны</p>
+          <p class="footer-two-text">+7 (988) 565 00 38</p>
+          <p class="footer-two-text">+375 33 662 82 56</p>
+          <p class="footer-two-text">Email</p>
+          <p class="footer-two-text">vladpertcev@mail.ru</p>
+          <p class="footer-two-text">korobko416@gmail.com</p>
+        </div>
+        <div class="footer-two">
+          <strong class="footer-two-title">Наш адрес</strong>
+          <p class="footer-two-text">Россия</p>
+          <p class="footer-two-text">Ростов-на-Дону ул.</p>
+          <p class="footer-two-text">Богачева, 16</p>
+        </div>
+        <div class="footer-two">
+          <strong class="footer-two-title">Информация</strong>
+          <p class="footer-two-text">Доставка и оплата</p>
+          <p class="footer-two-text">Гарантии</p>
+          <p class="footer-two-text">Возврат товара</p>
+        </div>
+      </footer>
+      <p class="the-end">© 2021 Golden Soft All rights reserved.</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/slider.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>
