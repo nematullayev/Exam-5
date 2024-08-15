@@ -8,9 +8,9 @@ let products = localStorage.getItem("products")
         id: 1,
         topImg: "./images/office.svg",
         title: "Вариативный замок Golden Soft для отеля",
-        discountPrice: "7 000₽",
+        discountPrice: 7000,
         realPrice: "8 000₽",
-        categories: "",
+        categories: ["Yangi", "Ishga", "Eski", "Популярности"],
         hasIsCard: "",
         aLot1:
           "Вариативный замок Golden Soft для отеля Вариативный замок Golden Soft для отеля Вариативный замок Golden Soft для отеля Вариативный замок Golden Soft для отеля",
@@ -21,9 +21,9 @@ let products = localStorage.getItem("products")
         id: 2,
         topImg: "./images/for-me.png",
         title: "Дверной Замок Golden Soft для офиса",
-        discountPrice: "33 000₽",
+        discountPrice: 33000,
         realPrice: "39 809₽",
-        categories: "",
+        categories: ["Yangi", "Eski", "Популярности"],
         hasIsCard: "",
         aLot1:
           "Дверной Замок Golden Soft для офиса Дверной Замок Golden Soft для офиса Дверной Замок Golden Soft для офиса Дверной Замок Golden Soft для офиса",
@@ -34,9 +34,9 @@ let products = localStorage.getItem("products")
         id: 3,
         topImg: "./images/for-children.png",
         title: "Крутой Замок Golden Soft для ресторанта",
-        discountPrice: "9 000₽",
+        discountPrice: 9000,
         realPrice: "12 000₽",
-        categories: "",
+        categories: ["Yangi", "Популярности"],
         hasIsCard: "",
         aLot1:
           "Крутой Замок Golden Soft для ресторанта Крутой Замок Golden Soft для ресторанта Крутой Замок Golden Soft для ресторанта Крутой Замок Golden Soft для ресторанта",
@@ -47,9 +47,9 @@ let products = localStorage.getItem("products")
         id: 4,
         topImg: "./images/office.png",
         title: "Вариативный замок Golden Soft для отеля",
-        discountPrice: "7 000₽",
+        discountPrice: 57000,
         realPrice: "8 000₽",
-        categories: "",
+        categories: ["Yangi", "Ishga", "Популярности"],
         hasIsCard: "",
         aLot1:
           "Вариативный замок Golden Soft для отеля Вариативный замок Golden Soft для отеля Вариативный замок Golden Soft для отеля Вариативный замок Golden Soft для отеля",
@@ -60,9 +60,9 @@ let products = localStorage.getItem("products")
         id: 5,
         topImg: "./images/for-me.png",
         title: "Дверной Замок Golden Soft для офиса",
-        discountPrice: "33 000₽",
+        discountPrice: 39000,
         realPrice: "39 809₽",
-        categories: "",
+        categories: ["Ishga", "Популярности"],
         hasIsCard: "",
         aLot1:
           "Дверной Замок Golden Soft для офиса Дверной Замок Golden Soft для офиса Дверной Замок Golden Soft для офиса Дверной Замок Golden Soft для офиса",
@@ -73,9 +73,9 @@ let products = localStorage.getItem("products")
         id: 6,
         topImg: "./images/for-children.png",
         title: "Крутой Замок Golden Soft для ресторанта",
-        discountPrice: "9 000₽",
+        discountPrice: 92000,
         realPrice: "12 000₽",
-        categories: "",
+        categories: ["Yangi", "Ishga", "Популярности"],
         hasIsCard: "",
         aLot1:
           "Крутой Замок Golden Soft для ресторанта Крутой Замок Golden Soft для ресторанта Крутой Замок Golden Soft для ресторанта Крутой Замок Golden Soft для ресторанта",
@@ -86,9 +86,9 @@ let products = localStorage.getItem("products")
         id: 7,
         topImg: "./images/office.png",
         title: "Вариативный замок Golden Soft для отеля",
-        discountPrice: "7 000₽",
+        discountPrice: 17000,
         realPrice: "8 000₽",
-        categories: "",
+        categories: ["Ishga", "Eski", "Популярности"],
         hasIsCard: "",
         aLot1:
           "Вариативный замок Golden Soft для отеля Вариативный замок Golden Soft для отеля Вариативный замок Golden Soft для отеля Вариативный замок Golden Soft для отеля",
@@ -99,9 +99,9 @@ let products = localStorage.getItem("products")
         id: 8,
         topImg: "./images/for-me.png",
         title: "Дверной Замок Golden Soft для офиса",
-        discountPrice: "33 000₽",
+        discountPrice: 3000,
         realPrice: "39 809₽",
-        categories: "",
+        categories: ["Ishga", "Популярности"],
         hasIsCard: "",
         aLot1:
           "Дверной Замок Golden Soft для офиса Дверной Замок Golden Soft для офиса Дверной Замок Golden Soft для офиса Дверной Замок Golden Soft для офиса",
@@ -112,9 +112,9 @@ let products = localStorage.getItem("products")
         id: 9,
         topImg: "./images/for-children.png",
         title: "Крутой Замок Golden Soft для ресторанта",
-        discountPrice: "9 000₽",
+        discountPrice: 1000,
         realPrice: "12 000₽",
-        categories: "",
+        categories: ["Eski", "Популярности"],
         hasIsCard: "",
         aLot1:
           "Крутой Замок Golden Soft для ресторанта Крутой Замок Golden Soft для ресторанта Крутой Замок Golden Soft для ресторанта Крутой Замок Golden Soft для ресторанта",
@@ -125,9 +125,9 @@ let products = localStorage.getItem("products")
         id: 10,
         topImg: "./images/office.png",
         title: "Вариативный замок Golden Soft для отеля",
-        discountPrice: "7 000₽",
+        discountPrice: 7000,
         realPrice: "8 000₽",
-        categories: "",
+        categories: ["Ishga", "Eski", "Популярности"],
         hasIsCard: "",
         aLot1:
           "Вариативный замок Golden Soft для отеля Вариативный замок Golden Soft для отеля Вариативный замок Golden Soft для отеля Вариативный замок Golden Soft для отеля",
@@ -138,9 +138,9 @@ let products = localStorage.getItem("products")
         id: 11,
         topImg: "./images/for-me.png",
         title: "Дверной Замок Golden Soft для офиса",
-        discountPrice: "33 000₽",
+        discountPrice: 33000,
         realPrice: "39 809₽",
-        categories: "",
+        categories: ["Yangi", "Ishga", "Популярности"],
         hasIsCard: "",
         aLot1:
           "Дверной Замок Golden Soft для офиса Дверной Замок Golden Soft для офиса Дверной Замок Golden Soft для офиса Дверной Замок Golden Soft для офиса",
@@ -151,9 +151,9 @@ let products = localStorage.getItem("products")
         id: 12,
         topImg: "./images/for-children.png",
         title: "Крутой Замок Golden Soft для ресторанта",
-        discountPrice: "9 000₽",
+        discountPrice: 9000,
         realPrice: "12 000₽",
-        categories: "",
+        categories: ["Yangi", "Ishga", "Eski", "Популярности"],
         aLot: "Дверной Замок Golden Soft для офиса Дверной Замок Golden Soft для офиса Дверной Замок Golden Soft для офиса Дверной Замок Golden Soft для офиса",
         aLot2:
           "Дверной Замок Golden Soft для офиса Дверной Замок Golden Soft для офиса Дверной Замок Golden Soft для офиса",
@@ -161,10 +161,40 @@ let products = localStorage.getItem("products")
       },
     ];
 // localStorage.setItem("products", JSON.stringify(products));
+
+const categories = ["Yangi", "Ishga", "Eski", "Популярности"];
+
 const elWrapper = findElement(".hero-right");
 const newTem = findElement("#template");
 const startValInp = findElement(".inp1");
-const endtValInp = findElement(".inp2");
+const endValInp = findElement(".inp2");
+const elCatigories = findElement(".reminder-right-select");
+const elForm = findElement(".hero-left-inps");
+const deleate = findElement(".reminder-left-end-buton");
+
+elForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const maxVal = Number(endValInp.value);
+  const minVal = Number(startValInp.value);
+  const newArr = products.filter((item) => {
+    const price = Number(item.discountPrice);
+    console.log(price);
+    return minVal < price && price < maxVal;
+  });
+  createCards(newArr);
+});
+
+deleate.addEventListener("click", () => {
+  createCards(products);
+});
+
+elCatigories.addEventListener("change", () => {
+  const filteredArray = products.filter((item) =>
+    item.categories.includes(elCatigories.value)
+  );
+
+  createCards(filteredArray);
+});
 
 function createCards(items) {
   elWrapper.textContent = null;
