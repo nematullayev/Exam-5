@@ -228,5 +228,6 @@ elWrapper.addEventListener("click", (evt) => {
   if (evt.target.className.includes("hero-right-one-center-img")) {
     const id = evt.target.dataset.id;
     localStorage.setItem("id", id);
+    localStorage.setItem("products", JSON.stringify(products));
   }
 });
