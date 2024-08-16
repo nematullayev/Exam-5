@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./style.css" />
     <title>Single Page</title>
   </head>
-  <body>
+  <body style="background-color: #f3f3f3">
     <div class="header-top-wrapper">
       <div class="header-top container">
         <p class="header-top-text1">
@@ -58,7 +58,69 @@
     </header>
     <hr class="hr" />
 
-    <div style="margin-top: 450px" class="footer-wrapper">
+    <div class="wrapp container">
+      <template id="template">
+        <div class="card-right-one">
+          <div class="card-top">
+            <h4>Корзина</h4>
+            <img src="./images/ixe.svg" alt="ixe" />
+          </div>
+          <div class="card-botom">
+            <div class="card-botom-left">
+              <img
+                class="hero-right-one-center-img card-img"
+                src=""
+                alt="office"
+              />
+
+              <div class="card-right-one-title">
+                <div>
+                  <h3 class="hero-right-one-title-tit"></h3>
+                  <p class="card-right-nma">
+                    + Подарок:
+                    <span class="pril">
+                      “Приложение к замкам Golden Service”</span
+                    >
+                  </p>
+                </div>
+                <div class="card-plus-minus">
+                  <p>-</p>
+                  <p class="card-plus-minus-num">0</p>
+                  <p>+</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-botom-right">
+              <div class="card-botom-left-fist">
+                <img class="deleate" src="./images/del.svg" alt="" />
+                <p class="card-right-one-del">Удалить</p>
+              </div>
+              <div class="card-botom-right-second">
+                <h2 class="hero-right-one-prices-discount-value">₽</h2>
+                <!-- <h3 class="hero-right-one-prices-real-value">8 000₽</h3> -->
+              </div>
+            </div>
+          </div>
+          <div class="card-end">
+            <div class="card-end-top">
+              <p class="card-end-top-text">
+                Итого: <strong class="card-end-top-text2">30 000 ₽</strong>
+              </p>
+            </div>
+            <div class="card-end-bootom">
+              <button class="card-end-bootom-btn">Оформить заказ</button>
+              <a href="./index.html"
+                ><button class="card-end-bootom-btn2">
+                  Продолжить покупки
+                </button></a
+              >
+            </div>
+          </div>
+        </div>
+      </template>
+    </div>
+
+    <div style="margin-top: 150px" class="footer-wrapper">
       <footer class="footer container">
         <div class="footer-one">
           <div class="footer-one-top">
